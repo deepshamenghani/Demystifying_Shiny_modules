@@ -1,0 +1,50 @@
+
+/* PANELS */
+.panel {
+    padding: 10px;
+}
+
+/* change the btn primary color */
+.btn-primary {
+  background-color: #008080;
+  color: #ffffff;
+}
+
+.btn-md {
+   margin: 5px;
+}
+
+
+/* PANELS */
+.panel {
+    padding: 10px;
+}
+
+
+small {
+  font-size: 25px;
+}
+
+.container {
+  padding:10px;
+  margin:10px;
+}
+
+
+.container-fluid.plot-container {
+  height: 600px;
+  border: 2px solid #e3e7e9;
+  box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.3);
+  padding: 10px;
+  margin: 10px;
+}
+
+.container-fluid.panel-container {
+  height: 200px;
+  border: 2px solid #e3e7e9;
+  background: rgba(0,128,128,0.03);
+  box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.3);
+  padding: 10px;
+  margin: 10px;
+}
+
