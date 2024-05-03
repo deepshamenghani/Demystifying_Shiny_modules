@@ -4,7 +4,7 @@ This repository contains the non-modularized and modularized code for the bigfoo
 
 This Shiny web application provides interactive visualizations of Bigfoot sightings in the United States. It allows users to explore and analyze Bigfoot sighting data through county-wise and yearly plots. The app also provides an option to compare data for two different states.
 
-![image](https://github.com/deepshamenghani/cascadia_bigfoot_shiny/assets/46545400/95d7194b-9834-4ba5-b18b-53b8c88744d2)
+![image](https://github.com/deepshamenghani/Demystifying_Shiny_modules/assets/46545400/3d064f2d-0929-453c-93f2-b7af14cf1827)
 
 ## Getting Started with app_modular.R file
 
