@@ -1,5 +1,5 @@
 # UI function for the input module
-module_input_ui <- function(id, df, defaultstate = "Washington") {
+module_input_ui <- function(id, df, defaultstate = "California") {
   # Namespace
   ns <- NS(id)  # Create a namespace to isolate the inputs and outputs within this module
   
@@ -38,7 +38,7 @@ module_input_server <- function(id, df) {
 ### Testing the modules
 
 # Load the data set from the CSV file
-dataset <- read.csv("./data/bfro_reports_geocoded.csv")
+dataset <- read.csv("./data/synthetic_bigfoot_sightings.csv")
 
 # UI for testing multiple input modules
 ui_test_multiple <- fluidPage(

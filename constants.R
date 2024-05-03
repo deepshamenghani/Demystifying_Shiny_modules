@@ -9,7 +9,7 @@ app_title <- "Bigfoot Sightings"
 default_state <- "Washington"
 
 # Load the dataset from a csv file
-dataset <- read.csv("./data/bfro_reports_geocoded.csv")
+dataset <- read.csv("./data/synthetic_bigfoot_sightings.csv")
 
 # Set the page heading
 page_heading <- "Bigfoot Sightings <small>by Deepsha Menghani</small>"

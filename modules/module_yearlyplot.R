@@ -21,7 +21,7 @@ module_yearly_server <- function(id, df_filtered) {
                  
                  output$plotyearly <- renderPlot({
                    df_filtered() |>  # Filtered data frame received from the input module
-                     mutate(year = floor_date(as.Date(date), 'year')) |>  # Convert the 'date' column to year only
+                     mutate(year = floor_date(as.Date(date, "%m/%d/%Y"), 'year')) |>  # Convert the 'date' column to year only
                      count(year) |>  # Count the occurrences of each year
                      filter(!is.na(year)) |>  # Remove rows with missing year values
                      arrange(desc(n)) |>  # Arrange the data by the count of sightings in descending order

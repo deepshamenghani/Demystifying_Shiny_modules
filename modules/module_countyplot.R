@@ -31,7 +31,7 @@ module_county_server <- function(id, df_filtered) {
                      labs(y = "", x = "") +  # Remove axis labels
                      theme_minimal() +  # Use a minimal theme for the plot
                      coord_flip() +  # Flip the x and y axes to create a horizontal bar plot
-                     ylim(c(0, 85)) +  # Set the y-axis limits
+                     ylim(c(0, 50)) +  # Set the y-axis limits
                      theme(
                        panel.grid = element_blank(),  # Remove grid lines
                        text = element_text(size = 20),  # Set the text size

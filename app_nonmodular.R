@@ -4,7 +4,7 @@ library(DT)         # R interface to the DataTables library for interactive tabl
 library(shiny)      # Web application framework for R
 
 # Read the dataset from a CSV file
-dataset <- read.csv("./data/bfro_reports_geocoded.csv")
+dataset <- read.csv("./data/synthetic_bigfoot_sightings.csv")
 
 # Define the user interface (UI) for the Shiny app
 ui <- fluidPage(
@@ -19,7 +19,7 @@ ui <- fluidPage(
              inputId = "state",
              label = "Select State",
              choices = unique(dataset$state),  # Unique states from the dataset
-             selected = "Washington",          # Default selected state
+             selected = "California",          # Default selected state
              multiple = FALSE                  # Only one state can be selected
            )
     ),
@@ -78,7 +78,7 @@ server <- function(input, output, session) {
       labs(y = "", x = "") +          # Remove y and x axis labels
       theme_minimal() +               # Use a minimal theme
       coord_flip() +                  # Flip the x and y axes
-      ylim(c(0, 85)) +                # Set y-axis limits
+      ylim(c(0, 50)) +                # Set y-axis limits
       theme(                          # Additional theme customization
         panel.grid = element_blank(),
         text = element_text(size = 20),
@@ -91,7 +91,7 @@ server <- function(input, output, session) {
   # Yearly plot: Render the plot for yearly sightings over time
   output$plotyearly <- renderPlot({
     data_filtered() |>                 # Get the filtered dataset for the selected state
-      mutate(year = floor_date(as.Date(date), 'year')) |>  # Extract the year from the date column
+      mutate(year = floor_date(as.Date(date, "%m/%d/%Y"), 'year')) |>  # Extract the year from the date column
       count(year) |>                   # Count the number of sightings for each year
       filter(!is.na(year)) |>          # Remove rows with missing years
       arrange(desc(n)) |>              # Arrange data in descending order of sightings
@@ -137,7 +137,7 @@ server <- function(input, output, session) {
       labs(y = "", x = "") +          # Remove y and x axis labels
       theme_minimal() +               # Use a minimal theme
       coord_flip() +                  # Flip the x and y axes
-      ylim(c(0, 85)) +                # Set y-axis limits
+      ylim(c(0, 50)) +                # Set y-axis limits
       theme(                          # Additional theme customization
         panel.grid = element_blank(),
         text = element_text(size = 20),
@@ -150,7 +150,7 @@ server <- function(input, output, session) {
   # Yearly plot for state2: Render the plot for yearly sightings over time in state2
   output$plotyearly2 <- renderPlot({
     data_filtered2() |>               # Get the filtered dataset for state2
-      mutate(year = floor_date(as.Date(date), 'year')) |>  # Extract the year from the date column
+      mutate(year = floor_date(as.Date(date, "%m/%d/%Y"), 'year')) |>  # Extract the year from the date column
       count(year) |>                   # Count the number of sightings for each year
       filter(!is.na(year)) |>          # Remove rows with missing years
       arrange(desc(n)) |>              # Arrange data in descending order of sightings

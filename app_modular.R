@@ -10,7 +10,7 @@ source("./modules/module_countyplot.R")   # Module for county plot UI and server
 source("./modules/module_yearlyplot.R")   # Module for yearly plot UI and server logic
 
 # Read the dataset from CSV file
-dataset <- read.csv("./data/bfro_reports_geocoded.csv")
+dataset <- read.csv("./data/synthetic_bigfoot_sightings.csv")
 
 # Define the UI layout for the Shiny app
 ui <- fluidPage(
