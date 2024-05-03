@@ -2,7 +2,7 @@
 
 This repository contains the non-modularized and modularized code for the bigfoot shiny app. The goal is to showcase how to learn Shiny modules by modularizing an existing app, hence there is the code for non-modularized as well as modularized app.R files. The code is simple because the goal is to explain module concepts as simply as possible. 
 
-This Shiny web application provides interactive visualizations of Bigfoot sightings in the United States. It allows users to explore and analyze Bigfoot sighting data through county-wise and yearly plots. The app also provides an option to compare data for two different states.
+This Shiny web application provides interactive visualizations of Bigfoot sightings in the United States. It allows users to explore and analyze Bigfoot sighting data through county-wise and yearly plots. The app also provides an option to compare data for two different states. Note that this is based on synthetically generated dataset and is not meant to resemble true sightings.
 
 ![image](https://github.com/deepshamenghani/Demystifying_Shiny_modules/assets/46545400/3d064f2d-0929-453c-93f2-b7af14cf1827)
 
